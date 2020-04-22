@@ -4,6 +4,11 @@ set nu
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set expandtab                 " replace tabs with spaces
+set tabstop=2                 " 2 spaces for a tab for Ansible
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
