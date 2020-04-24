@@ -20,7 +20,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 "
 
+Plugin 'pearofducks/ansible-vim'
 Plugin 'preservim/nerdtree'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'dense-analysis/ale'
+Plugin 'adrienverge/yamllint'
+Plugin 'hashivim/vim-terraform'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
