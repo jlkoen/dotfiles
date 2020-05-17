@@ -26,10 +26,9 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'dense-analysis/ale'
 Plugin 'adrienverge/yamllint'
 Plugin 'hashivim/vim-terraform'
-" " The following are examples of different formats supported.
-" " Keep Plugin commands between vundle#begin/end.
-" " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'vim-python/python-syntax'
 "
 " " plugin from http://vim-scripts.org/vim/scripts.html
 " " Plugin 'L9'
@@ -47,6 +46,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 " " Plugin 'ascenator/L9', {'name': 'newL9'}
 "
 Plugin 'morhetz/gruvbox'
+Plugin 'Vimjas/vim-python-pep8-indent'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
