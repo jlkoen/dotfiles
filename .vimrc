@@ -5,6 +5,7 @@ set nu
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set expandtab                 " replace tabs with spaces
+set smartindent
 set tabstop=2                 " 2 spaces for a tab for Ansible
 set noswapfile
 set nobackup
