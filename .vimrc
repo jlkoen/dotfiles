@@ -11,45 +11,32 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" " alternatively, pass a path where Vundle should install plugins
-" "call vundle#begin('~/some/path/here')
-"
-" " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-"
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'pearofducks/ansible-vim'
-Plugin 'preservim/nerdtree'
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'dense-analysis/ale'
-Plugin 'adrienverge/yamllint'
-Plugin 'hashivim/vim-terraform'
-Plugin 'tpope/vim-fugitive'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'vim-python/python-syntax'
-"
-" " plugin from http://vim-scripts.org/vim/scripts.html
-" " Plugin 'L9'
-" " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-"
-" " git repos on your local machine (i.e. when working on your own plugin)
-" " Plugin 'file:///home/gmarik/path/to/plugin'
-" " The sparkup vim script is in a subdirectory of this repo called vim.
-" " Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"
-" " Install L9 and avoid a Naming conflict if you've already installed a
-" " different version somewhere else.
-" " Plugin 'ascenator/L9', {'name': 'newL9'}
-"
-Plugin 'morhetz/gruvbox'
-Plugin 'Vimjas/vim-python-pep8-indent'
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'pearofducks/ansible-vim'
+Plug 'preservim/nerdtree'
+Plug 'chase/vim-ansible-yaml'
+Plug 'adrienverge/yamllint'
+Plug 'hashivim/vim-terraform'
+Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-python/python-syntax'
+Plug 'jiangmiao/auto-pairs'
+Plug 'morhetz/gruvbox'
+Plug 'Vimjas/vim-python-pep8-indent'
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
 " "filetype plugin on
