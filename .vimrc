@@ -10,6 +10,7 @@ set tabstop=2                 " 2 spaces for a tab for Ansible
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
+set clipboard=unnamed
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -24,7 +25,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'pearofducks/ansible-vim'
 Plug 'preservim/nerdtree'
-Plug 'chase/vim-ansible-yaml'
+"Plug 'chase/vim-ansible-yaml'
 Plug 'adrienverge/yamllint'
 Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-fugitive'
