@@ -12,6 +12,25 @@ set nobackup
 set undodir=~/.vim/undodir
 set clipboard=unnamed
 
+imap jj <Esc>
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = " " " Leader is the space key
+let g:mapleader = " "
+"auto indent for brackets
+inoremap {<CR> {<CR>}<Esc>O
+" easier write
+nmap <leader>w :w!<cr>
+" easier quit
+nmap <leader>q :q<cr>
+" silence search highlighting
+nnoremap <leader>sh :nohlsearch<Bar>:echo<CR>
+"paste from outside buffer
+nnoremap <leader>p :set paste<CR>"+p:set nopaste<CR>
+vnoremap <leader>p <Esc>:set paste<CR>gv"+p:set nopaste<CR>
+"copy to outside buffer
+vnoremap <leader>y "+y
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
