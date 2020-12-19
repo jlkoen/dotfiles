@@ -43,7 +43,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'pearofducks/ansible-vim'
 Plug 'preservim/nerdtree'
-Plug 'chase/vim-ansible-yaml'
 Plug 'adrienverge/yamllint'
 Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-fugitive'
