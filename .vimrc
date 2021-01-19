@@ -5,7 +5,7 @@ set nu
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set expandtab                 " replace tabs with spaces
-set smartindent
+" set smartindent
 set tabstop=2                 " 2 spaces for a tab for Ansible
 set noswapfile
 set nobackup
@@ -17,7 +17,7 @@ imap jj <Esc>
 let mapleader = " " " Leader is the space key
 let g:mapleader = " "
 "auto indent for brackets
-inoremap {<CR> {<CR>}<Esc>O
+"inoremap {<CR> {<CR>}<Esc>O
 " easier write
 nmap <leader>w :w!<cr>
 " easier quit
@@ -50,9 +50,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-python/python-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
-Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
@@ -70,6 +71,7 @@ filetype plugin indent on    " required
 " " see :h vundle for more details or wiki for FAQ
 " " Put your non-Plugin stuff after this line
 " "
+
 colorscheme gruvbox
 set background=dark
 
