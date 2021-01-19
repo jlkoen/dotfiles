@@ -10,6 +10,7 @@ set tabstop=2                 " 2 spaces for a tab for Ansible
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
+set clipboard=unnamed
 
 imap jj <Esc>
 " With a map leader it's possible to do extra key combinations
@@ -43,6 +44,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'pearofducks/ansible-vim'
 Plug 'preservim/nerdtree'
+"Plug 'chase/vim-ansible-yaml'
 Plug 'adrienverge/yamllint'
 Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-fugitive'
