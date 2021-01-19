@@ -44,18 +44,14 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'pearofducks/ansible-vim'
 Plug 'preservim/nerdtree'
-"Plug 'chase/vim-ansible-yaml'
 Plug 'adrienverge/yamllint'
 Plug 'hashivim/vim-terraform'
-Plug 'tpope/vim-fugitive'
-Plug 'sheerun/vim-polyglot'
 Plug 'vim-python/python-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 " Use release branch (recommend)
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
